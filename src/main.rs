@@ -3,13 +3,13 @@ use std::cmp::Ordering;
 use std::io;
 use std::io::Write;
 
-fn main() {
-    let debug = false;
+const DEBUG: bool = false;
 
+fn main() {
     println!("Welcome to the number guessing game");
 
     let secret_number: u16 = rand::thread_rng().gen_range(1..=100);
-    if debug {
+    if DEBUG {
         eprintln!("@debug secret_number = {secret_number}")
     }
 
